@@ -1,0 +1,16 @@
+sid: llm-inference-service
+name: 大模型推理服务平台
+kind: inference
+precision: bf16
+models:
+  - name: 70B
+    params_b: 70
+    avg_in_tokens: 1500
+    avg_out_tokens: 600
+concurrency: 32
+latency_target_s: 3.0
+ctx_len: 4096
+cooling: cold-plate
+power_price: 0.8
+solution_price: 4200000
+years: 3

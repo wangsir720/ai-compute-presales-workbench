@@ -1,0 +1,47 @@
+[
+  {
+    "id": "node-01",
+    "name": "Compute Node 01",
+    "type": "ComputerSystem",
+    "power_w": 6300,
+    "status": "OK",
+    "memory_mb": 2097152,
+    "processors": [{"model": "GPU-x", "count": 8}]
+  },
+  {
+    "id": "node-02",
+    "name": "Compute Node 02",
+    "type": "ComputerSystem",
+    "power_w": 6300,
+    "status": "OK",
+    "memory_mb": 2097152,
+    "processors": [{"model": "GPU-x", "count": 8}]
+  },
+  {
+    "id": "node-03",
+    "name": "Compute Node 03",
+    "type": "ComputerSystem",
+    "power_w": 6300,
+    "status": "Disabled",
+    "memory_mb": 2097152,
+    "processors": [{"model": "GPU-x", "count": 8}]
+  },
+  {
+    "id": "node-04",
+    "name": "Compute Node 04",
+    "type": "ComputerSystem",
+    "power_w": 6300,
+    "status": "OK",
+    "memory_mb": 524288,
+    "processors": [{"model": "GPU-x", "count": 8}]
+  },
+  {
+    "id": "node-05",
+    "name": "Compute Node 05",
+    "type": "ComputerSystem",
+    "power_w": 6300,
+    "status": "OK",
+    "memory_mb": 2097152,
+    "processors": [{"model": "GPU-x", "count": 4}]
+  }
+]

@@ -1,0 +1,27 @@
+# 算力技术方案书 · {{ scenario.name }}
+
+## 一、容量测算
+
+{% if cap %}
+- 主模型：{{ cap.model }}（{{ cap.params_b }}B）
+- 权重显存：{{ cap.vram_weights_gb }} GB（含 1.2 倍冗余）
+- KV 缓存显存：{{ cap.vram_kv_gb }} GB（按 {{ cap.kv_bytes_per_token }} 字节/token 估算）
+- 显存总需求：{{ cap.vram_need_gb }} GB
+- 显存约束卡数：{{ cap.cards_for_vram }}；吞吐约束卡数：{{ cap.cards_for_tput }}
+- 瓶颈：{{ cap.bottleneck }} → 建议服务器 **{{ cap.servers }} 台**，实际部署 {{ cap.actual_cards }} 卡（{{ cap.accel }}）
+{% else %}
+（本场景未选定机型，容量测算见 `compute` 子命令逐机型输出）
+{% endif %}
+
+## 二、双生态选型评分
+
+| 机型 | 评分 | 服务器 | 卡数 | 瓶颈 | 国产权重 |
+|---|---|---|---|---|---|
+{% for r in matrix -%}
+| {{ r.sku }} | {{ r.score }} | {{ r.servers }} | {{ r.actual_cards }} | {{ r.bottleneck }} | {{ r.localization }} |
+{% endfor %}
+
+{% if recommend %}**推荐机型：{{ recommend.sku }}**（评分 {{ recommend.score }}）{% endif %}
+
+## 三、设备清单
+详见 `03-设备清单BOM.csv`；架构图见 `06-系统架构图.svg`。

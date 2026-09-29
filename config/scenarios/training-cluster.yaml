@@ -1,0 +1,15 @@
+sid: training-cluster
+name: 大模型训练集群
+kind: training
+precision: bf16
+models:
+  - name: 70B
+    params_b: 70
+    avg_in_tokens: 2048
+    avg_out_tokens: 2048
+train_tokens_b: 20
+train_days: 30
+cooling: immersion
+power_price: 0.8
+solution_price: 9800000
+years: 3

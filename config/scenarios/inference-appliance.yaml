@@ -1,0 +1,16 @@
+sid: inference-appliance
+name: AI 推理一体机
+kind: appliance
+precision: int8
+models:
+  - name: 13B
+    params_b: 13
+    avg_in_tokens: 1000
+    avg_out_tokens: 400
+concurrency: 8
+latency_target_s: 3.0
+ctx_len: 4096
+cooling: air
+power_price: 0.8
+solution_price: 2600000
+years: 3

@@ -1,0 +1,23 @@
+# TCO 与毛利测算 · {{ scenario.name }}
+
+## 一、成本拆解（三年）
+
+| 项 | 数值（元） |
+|---|---|
+| 硬件成本基准（档位价 × 7 折） | {{ tco.cost_basis }} |
+| PUE | {{ tco.pue }} |
+| 年耗电（kWh） | {{ tco.annual_energy_kwh }} |
+| 三年电费 | {{ tco.elec_3yr }} |
+| 三年运维 | {{ tco.opex_3yr }} |
+| **三年 TCO 合计** | **{{ tco.total }}** |
+
+## 二、毛利与敏感性
+
+- 方案报价（示例）：{{ scenario.solution_price }} 元
+- 方案毛利：{{ margin }} 元
+
+| 折扣 | 0% | 5% | 10% | 15% |
+|---|---|---|---|---|
+| 毛利（元） | {% for k in [0.0, 0.05, 0.10, 0.15] %}{{ sensitivity[k] }}{% if not loop.last %} | {% endif %}{% endfor %} |
+
+> 说明：硬件成本按公开档位价的 7 折折算，避免高估成本；报价为含三年服务/软件的方案总包示例，落地以正式报价为准。

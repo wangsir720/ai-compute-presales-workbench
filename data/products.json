@@ -1,0 +1,61 @@
+[
+  {
+    "sku": "X86-GPU-8U8", "category": "gpu_server", "cpu_arch": "x86", "accel": "nvidia-class",
+    "cards": 8, "per_card_vram_gb": 80, "per_card_bf16_tflops": 989, "tdp_w": 6500,
+    "price_ref": 1300000, "localization": 0.6,
+    "note": "8 卡 x86 GPU 服务器（NVIDIA 类参数化档位）"
+  },
+  {
+    "sku": "X86-GPU-4U4", "category": "gpu_server", "cpu_arch": "x86", "accel": "nvidia-class",
+    "cards": 4, "per_card_vram_gb": 80, "per_card_bf16_tflops": 989, "tdp_w": 3500,
+    "price_ref": 750000, "localization": 0.6,
+    "note": "4 卡 x86 GPU 服务器，适合中小规模推理/一体机"
+  },
+  {
+    "sku": "KP-ASC-8U8", "category": "gpu_server", "cpu_arch": "kunpeng", "accel": "ascend-class",
+    "cards": 8, "per_card_vram_gb": 64, "per_card_bf16_tflops": 350, "tdp_w": 6000,
+    "price_ref": 1100000, "localization": 1.0,
+    "note": "鲲鹏 CPU + 昇腾 NPU 8 卡服务器（国产双生态）"
+  },
+  {
+    "sku": "KP-ASC-4U4", "category": "gpu_server", "cpu_arch": "kunpeng", "accel": "ascend-class",
+    "cards": 4, "per_card_vram_gb": 64, "per_card_bf16_tflops": 350, "tdp_w": 3200,
+    "price_ref": 620000, "localization": 1.0,
+    "note": "鲲鹏 + 昇腾 4 卡服务器，国产替代主力"
+  },
+  {
+    "sku": "X86-CPU-2U", "category": "cpu_server", "cpu_arch": "x86", "accel": "",
+    "cards": 0, "per_card_vram_gb": 0, "per_card_bf16_tflops": 0, "tdp_w": 550,
+    "price_ref": 60000, "localization": 0.6, "note": "管理/控制节点"
+  },
+  {
+    "sku": "KP-CPU-2U", "category": "cpu_server", "cpu_arch": "kunpeng", "accel": "",
+    "cards": 0, "per_card_vram_gb": 0, "per_card_bf16_tflops": 0, "tdp_w": 500,
+    "price_ref": 55000, "localization": 1.0, "note": "鲲鹏管理节点"
+  },
+  {
+    "sku": "SW-100G", "category": "switch", "cpu_arch": "generic", "accel": "",
+    "cards": 0, "per_card_vram_gb": 0, "per_card_bf16_tflops": 0, "tdp_w": 300,
+    "price_ref": 80000, "localization": 0.5, "note": "100G 汇聚交换机"
+  },
+  {
+    "sku": "NAS-STORAGE", "category": "storage", "cpu_arch": "generic", "accel": "",
+    "cards": 0, "per_card_vram_gb": 0, "per_card_bf16_tflops": 0, "tdp_w": 800,
+    "price_ref": 300000, "localization": 0.5, "note": "模型/数据集存储"
+  },
+  {
+    "sku": "RACK-42U", "category": "rack", "cpu_arch": "generic", "accel": "",
+    "cards": 0, "per_card_vram_gb": 0, "per_card_bf16_tflops": 0, "tdp_w": 0,
+    "price_ref": 30000, "localization": 0.5, "note": "42U 标准机柜"
+  },
+  {
+    "sku": "PDU-DUAL", "category": "pdu", "cpu_arch": "generic", "accel": "",
+    "cards": 0, "per_card_vram_gb": 0, "per_card_bf16_tflops": 0, "tdp_w": 0,
+    "price_ref": 5000, "localization": 0.5, "note": "双路 PDU"
+  },
+  {
+    "sku": "CDU-LIQUID", "category": "cooling", "cpu_arch": "generic", "accel": "",
+    "cards": 0, "per_card_vram_gb": 0, "per_card_bf16_tflops": 0, "tdp_w": 200,
+    "price_ref": 150000, "localization": 0.5, "note": "液冷分配单元（冷板/浸没）"
+  }
+]
